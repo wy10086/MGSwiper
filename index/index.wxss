@@ -1,0 +1,16 @@
+
+.slideshowView{
+  height: 400rpx;
+  width: 100%;
+  background-color: lightgrey
+}
+.slideshowView{
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-item{
+  display: block;
+  height: 400rpx;
+  width: 100%;
+}
+

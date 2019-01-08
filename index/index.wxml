@@ -1,0 +1,38 @@
+<view class="container">
+  <view class='slideshowView_bg'>
+    <!-- swiper轮播图 -->
+    <!-- 参数 
+    indicator-dots:false  是否显示面板指示点
+    ndicator-color:rgba(0, 0, 0, .3) 	指示点颜色
+    indicator-active-color:#000000 	当前选中的指示点颜色
+    autoplay:false 	是否自动切换
+    current:0 	当前所在滑块的 index
+    current-item-id:"" 	当前所在滑块的 item-id ，不能与 current 被同时指定
+    interval:5000 	自动切换时间间隔
+    duration:500 	滑动动画时长
+    circular:false 	是否采用衔接滑动
+    vertical:false 	滑动方向是否为纵向
+    previous-margin:"0px" 	前边距，可用于露出前一项的一小部分，接受 px 和 rpx 值
+    next-margin:"0px" 	后边距，可用于露出后一项的一小部分，接受 px 和 rpx 值
+    display-multiple-items:1 	同时显示的滑块数量
+    skip-hidden-item-layout:false 	是否跳过未显示的滑块布局，设为 true 可优化复杂情况下的滑动性能，但会丢失隐藏状态滑块的布局信息
+    bindchange:   current 改变时会触发 change 事件，event.detail = {current: current, source: source}
+    bindtransition:     swiper-item 的位置发生改变时会触发 transition 事件，event.detail = {dx: dx, dy: dy}
+    bindanimationfinish:    动画结束时会触发 animationfinish 事件，event.detail 同上 
+    -->
+    <swiper class='slideshowView' indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" vertical="{{false}}" interval="2000" duration="500" previous-margin="0px" next-margin="0">
+    
+       <view wx:for="{{bg_images}}">
+
+        <swiper-item>
+            <image class="swiper-item" src="{{item}}"></image>
+        </swiper-item>
+
+      </view>
+      
+    </swiper>
+  </view>
+</view>
+
+
+
